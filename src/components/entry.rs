@@ -6,6 +6,7 @@ pub fn Entry(cx: Scope) -> Element {
 
     cx.render(rsx!(
         h1 {
+            style { [include_str!("../../static/entry.scss")] }
             "This page is Entry"
         }
         input {
