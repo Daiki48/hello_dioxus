@@ -9,7 +9,7 @@ fn app(cx: Scope) -> Element {
 
     cx.render(rsx!(
         h1 {
-            style { [include_str!("../style.scss")] }
+            style { [include_str!("../static/style.scss")] }
             "Counter : {count}"
         }
         button {
