@@ -1,4 +1,9 @@
 use dioxus::prelude::*;
+use dioxus_router::{
+    Link,
+    Route,
+    Router
+};
 
 mod components;
 
@@ -7,24 +12,17 @@ fn main() {
 }
 
 fn app(cx: Scope) -> Element {
-    let item = use_state(&cx, || "".to_string());
 
     cx.render(rsx!(
-        components::counter::Counter{}
-        h2 {
-            "This is h2 tag"
-        }
-        div {
-            class: "divtag",
-            "This is div tag"
-        }
-        input {
-            oninput: move |evt| {
-                item.set(evt.value.clone())
+        Router {
+            ul {
+                Link { to: "/", li {"Go home"} }
+                Link { to: "/counter", li {"Counter"} }
+                Link { to: "/entry", li {"Entry"} }
             }
-        }
-        label {
-            "item is {item}"
+            Route { to: "/", "Home" }
+            Route { to: "/counter", components::counter::Counter{} }
+            Route { to: "/entry", components::entry::Entry{} }
         }
     ))
 }

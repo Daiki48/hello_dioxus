@@ -6,7 +6,7 @@ pub fn Counter(cx: Scope) -> Element {
 
     cx.render(rsx!(
         h1 {
-            style { [include_str!("../../static/style.scss")] }
+            style { [include_str!("../../static/counter.scss")] }
             "Counter : {count}"
         }
         button {
