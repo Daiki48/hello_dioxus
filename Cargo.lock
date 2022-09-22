@@ -306,6 +306,7 @@ name = "hello_dioxus"
 version = "0.1.0"
 dependencies = [
  "dioxus",
+ "dioxus-router",
 ]
 
 [[package]]
