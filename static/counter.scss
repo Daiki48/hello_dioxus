@@ -1,24 +1,13 @@
 h1 {
 	padding: 10px;
-	background: blue;
+	background: #666666;
+	text-align: center;
 }
 
 button {
 	padding: 10px;
 	margin: 10px;
 	background: gray;
-}
-
-h2 {
-	background: green;
-	text-align: right;
-	padding-right: 10px;
-}
-
-.divtag {
-	background: #012345;
-	color: white;
-	text-align: center;
 }
 
 .btnplus {
@@ -29,8 +18,4 @@ h2 {
 .btnminus {
 	background: #555111;
 	font-size: 40px;
-}
-
-label {
-	margin: 10px;
 }
