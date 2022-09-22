@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-#[warn(non_snake_case)]
+#[allow(non_snake_case)]
 pub fn Counter(cx: Scope) -> Element {
     let mut count = use_state(&cx, || 0);
 
