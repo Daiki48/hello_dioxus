@@ -15,12 +15,19 @@ fn app(cx: Scope) -> Element {
 
     cx.render(rsx!(
         Router {
+            style { [include_str!("../static/main.scss")] }
             ul {
-                Link { to: "/", li {"Go home"} }
-                Link { to: "/counter", li {"Counter"} }
-                Link { to: "/entry", li {"Entry"} }
+                li {
+                    Link { to: "/", li {"Home"} }
+                }
+                li {
+                    Link { to: "/counter", li {"Counter"} }
+                }
+                li {
+                    Link { to: "/entry", li {"Entry"} }
+                }
             }
-            Route { to: "/", "Home" }
+            Route { to: "/", components::home::Home{} }
             Route { to: "/counter", components::counter::Counter{} }
             Route { to: "/entry", components::entry::Entry{} }
         }
