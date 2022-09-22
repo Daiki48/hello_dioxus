@@ -5,8 +5,8 @@ pub fn Entry(cx: Scope) -> Element {
     let item = use_state(&cx, || "".to_string());
 
     cx.render(rsx!(
+        style { [include_str!("../../static/entry.scss")] }
         h1 {
-            style { [include_str!("../../static/entry.scss")] }
             "This page is Entry"
         }
         input {
@@ -16,6 +16,9 @@ pub fn Entry(cx: Scope) -> Element {
         }
         label {
             "item is {item}"
+        }
+
+        textarea {
         }
 
     ))

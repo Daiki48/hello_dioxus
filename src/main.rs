@@ -14,8 +14,8 @@ fn main() {
 fn app(cx: Scope) -> Element {
 
     cx.render(rsx!(
+        style { [include_str!("../static/main.scss")] }
         Router {
-            style { [include_str!("../static/main.scss")] }
             ul {
                 li {
                     Link { to: "/", li {"Home"} }
@@ -30,6 +30,7 @@ fn app(cx: Scope) -> Element {
             Route { to: "/", components::home::Home{} }
             Route { to: "/counter", components::counter::Counter{} }
             Route { to: "/entry", components::entry::Entry{} }
+            Route { to: "", "Error 404 Not Found" }
         }
     ))
 }

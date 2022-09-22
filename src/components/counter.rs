@@ -5,8 +5,8 @@ pub fn Counter(cx: Scope) -> Element {
     let mut count = use_state(&cx, || 0);
 
     cx.render(rsx!(
+        style { [include_str!("../../static/counter.scss")] }
         h1 {
-            style { [include_str!("../../static/counter.scss")] }
             "Counter : {count}"
         }
         button {
