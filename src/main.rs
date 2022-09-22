@@ -6,6 +6,7 @@ fn main() {
 
 fn app(cx: Scope) -> Element {
     let mut count = use_state(&cx, || 0);
+    let item = use_state(&cx, || "".to_string());
 
     cx.render(rsx!(
         h1 {
@@ -36,6 +37,14 @@ fn app(cx: Scope) -> Element {
             class: "btnminus",
             onclick: move |_| count -= 10,
             "-10"
+        }
+        input {
+            oninput: move |evt| {
+                item.set(evt.value.clone())
+            }
+        }
+        label {
+            "item is {item}"
         }
     ))
 }
