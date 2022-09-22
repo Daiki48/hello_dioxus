@@ -1,42 +1,22 @@
 use dioxus::prelude::*;
 
+mod components;
+
 fn main() {
     dioxus::web::launch(app);
 }
 
 fn app(cx: Scope) -> Element {
-    let mut count = use_state(&cx, || 0);
     let item = use_state(&cx, || "".to_string());
 
     cx.render(rsx!(
-        h1 {
-            style { [include_str!("../static/style.scss")] }
-            "Counter : {count}"
-        }
-        button {
-            onclick: move |_| count += 1,
-            "+"
-        }
-        button {
-            onclick: move |_| count -= 1,
-            "-"
-        }
+        components::counter::Counter{}
         h2 {
             "This is h2 tag"
         }
         div {
             class: "divtag",
             "This is div tag"
-        }
-        button {
-            class: "btnplus",
-            onclick: move |_| count += 10,
-            "+10"
-        }
-        button {
-            class: "btnminus",
-            onclick: move |_| count -= 10,
-            "-10"
         }
         input {
             oninput: move |evt| {
