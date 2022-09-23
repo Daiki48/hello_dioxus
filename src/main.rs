@@ -5,6 +5,9 @@ use dioxus_router::{
     Router
 };
 
+use dioxus_free_icons::icons::fa_brands_icons::FaGithub;
+use dioxus_free_icons::Icon;
+
 mod components;
 
 fn main() {
@@ -31,6 +34,21 @@ fn app(cx: Scope) -> Element {
             Route { to: "/counter", components::counter::Counter{} }
             Route { to: "/entry", components::entry::Entry{} }
             Route { to: "", "Error 404 Not Found" }
+        }
+        footer {
+            p {
+                "©︎ 2022 Daiki",
+                a {
+                    class: "icongithub",
+                    href: "https://github.com/Daiki48/hello_dioxus",
+                    target: "_blank",
+                    Icon {
+                        width: 20,
+                        height: 20,
+                        icon: FaGithub,
+                    }
+                }
+            }
         }
     ))
 }
