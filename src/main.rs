@@ -29,10 +29,14 @@ fn app(cx: Scope) -> Element {
                 li {
                     Link { to: "/entry", li {"Entry"} }
                 }
+                li {
+                    Link { to: "/bbs", li {"Bbs"} }
+                }
             }
             Route { to: "/", components::home::Home{} }
             Route { to: "/counter", components::counter::Counter{} }
             Route { to: "/entry", components::entry::Entry{} }
+            Route { to: "/bbs", components::bbs::Bbs{} }
             Route { to: "", "Error 404 Not Found" }
         }
         footer {
