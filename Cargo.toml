@@ -12,3 +12,4 @@ readme = "README.md"
 dioxus = { version = "0.2.4", features = ["web"] }
 dioxus-free-icons = { version = "0.5.1", features = ["font-awesome-brands"] }
 dioxus-router = "0.2.3"
+firestore-sdk = "0.1.0"
