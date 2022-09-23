@@ -5,7 +5,7 @@ pub fn Bbs(cx: Scope) -> Element {
     let title = use_state(&cx, || "".to_string());
     let content = use_state(&cx, || "".to_string());
     cx.render(rsx!(
-        style { [include_str!("../../static/bbs.scss")] }
+        style { [include_str!("../../style/bbs.scss")] }
         h1 {
             "This page is BBS"
         }

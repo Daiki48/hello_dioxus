@@ -17,7 +17,7 @@ fn main() {
 fn app(cx: Scope) -> Element {
 
     cx.render(rsx!(
-        style { [include_str!("../static/main.scss")] }
+        style { [include_str!("../style/main.scss")] }
         Router {
             ul {
                 li {

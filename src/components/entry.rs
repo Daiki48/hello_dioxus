@@ -6,7 +6,7 @@ pub fn Entry(cx: Scope) -> Element {
     let article = use_state(&cx, || "".to_string());
 
     cx.render(rsx!(
-        style { [include_str!("../../static/entry.scss")] }
+        style { [include_str!("../../style/entry.scss")] }
         h1 {
             "This page is Entry"
         }
