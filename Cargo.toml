@@ -1,9 +1,12 @@
 [package]
 name = "hello_dioxus"
 version = "0.1.0"
+authors = ["Daiki Nakashima <daiki48.engineer@gmail.com>"]
+keywords = ["dioxus"]
+license = "MIT"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+readme = "README.md"
 
 [dependencies]
 dioxus = { version = "0.2.4", features = ["web"] }
