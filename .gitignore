@@ -1,3 +1,7 @@
 /target
 /dist
 /key
+
+.env*
+
+.DS_Store
